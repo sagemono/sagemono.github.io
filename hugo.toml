@@ -10,9 +10,13 @@ theme = "PaperMod"
   defaultTheme = "dark"
   ShowCodeCopyButtons = true
   ShowReadingTime = true
+  description = "my space"
+  images = ["og.png"]
+  disableFingerprinting = true
 
 [params.assets]
   favicon = "favicon.ico"
   favicon16x16 = "favicon.ico"
   favicon32x32 = "favicon.ico"
-  apple_touch_icon = "favicon.ico"
+  apple_touch_icn = "favicon.ico"
+
