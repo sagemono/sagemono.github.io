@@ -1,6 +1,6 @@
 baseURL = "https://sage.derg.lol/"
 languageCode = "en-us"
-title = "sage"
+title = "sagemono"
 theme = "PaperMod"
 
 [markup.highlight]
@@ -10,3 +10,9 @@ theme = "PaperMod"
   defaultTheme = "dark"
   ShowCodeCopyButtons = true
   ShowReadingTime = true
+
+[params.assets]
+  favicon = "favicon.ico"
+  favicon16x16 = "favicon.ico"
+  favicon32x32 = "favicon.ico"
+  apple_touch_icon = "favicon.ico"
