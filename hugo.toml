@@ -7,7 +7,7 @@ theme = "PaperMod"
   style = "monokai"
 
 [params]
-  description = "programming and reverse engineering notes"
+  description = "my slice of the internet"
   images = ["og.png"]
   defaultTheme = "dark"
   ShowCodeCopyButtons = true
