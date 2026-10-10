@@ -7,11 +7,11 @@ theme = "PaperMod"
   style = "monokai"
 
 [params]
+  description = "programming and reverse engineering notes"
+  images = ["og.png"]
   defaultTheme = "dark"
   ShowCodeCopyButtons = true
   ShowReadingTime = true
-  description = "my space"
-  images = ["og.png"]
   disableFingerprinting = true
 
 [params.assets]
