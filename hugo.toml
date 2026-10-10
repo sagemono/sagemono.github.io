@@ -1,0 +1,12 @@
+baseURL = "https://sage.derg.lol/"
+languageCode = "en-us"
+title = "sage"
+theme = "PaperMod"
+
+[markup.highlight]
+  style = "monokai"
+
+[params]
+  defaultTheme = "dark"
+  ShowCodeCopyButtons = true
+  ShowReadingTime = true
