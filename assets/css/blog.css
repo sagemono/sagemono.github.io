@@ -1,0 +1,56 @@
+/* Blog layout on top of night_console.css: header, post list, post page, footer. */
+:root {
+  --nc_title_size: clamp(30px, 3.6vw, 44px);
+  --nc_subtitle_size: clamp(16px, 1.5vw, 19px);
+  --nc_name_size: 22px;
+  --nc_label_size: 14px;
+  --nc_chip_height: 28px;
+  --page_width: 1100px;
+  --gutter: clamp(20px, 5vw, 56px);
+}
+a { color: inherit; text-decoration: none; }
+.wrap { max-width: var(--page_width); margin: 0 auto; padding: 0 var(--gutter); }
+
+/* Header: a strip of the page with one hairline; the current link rises. */
+.site_header {
+  position: sticky; top: 0; z-index: 10;
+  background: #0C0C0EC8; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--nc_rule_color);
+}
+.header_inner { height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.brand { display: inline-flex; align-items: center; gap: 12px; font-size: 21px; }
+.site_nav { display: flex; gap: 4px; }
+.site_nav a { padding: 6px 14px; font-size: 15px; color: var(--nc_soft); }
+
+/* Home: the video's heading row, then the posts in one well. */
+.home { padding-top: 72px; }
+.section_head { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px 32px; flex-wrap: wrap; }
+.section_head h1, .section_head p { margin: 0; }
+.section_head .nc_subtitle { padding-bottom: 6px; }
+.section_rule { height: 1px; background: var(--nc_rule_color); margin: 22px 0 32px; }
+.post_list { list-style: none; margin: 0; padding: 8px; }
+.post_row { display: grid; grid-template-columns: 1fr auto; gap: 4px 24px; padding: 16px 18px; }
+.post_row + .post_row { margin-top: 2px; }
+.post_row .nc_name { grid-column: 1; }
+.post_summary { grid-column: 1; font-size: 15px; color: var(--nc_dim); }
+.post_row time { grid-column: 2; grid-row: 1; align-self: center; font-size: 14px; color: var(--nc_dim); white-space: nowrap; }
+.post_row:hover .post_summary, .post_row:focus-visible .post_summary { color: var(--nc_soft); }
+
+/* Post page: one reading column. */
+.post { margin: 0 auto; padding-top: 64px; }
+.post_back { display: inline-flex; padding: 4px 12px; margin-left: -12px; font-size: 14px; color: var(--nc_dim); text-decoration: none; }
+.nc_prose .post_back { text-decoration: none; }
+.post_meta { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; font-size: 15px; color: var(--nc_dim); }
+.post_meta .nc_chip { font-size: 13px; padding: 0 12px; }
+.nc_prose > h1 + .post_meta { margin-top: 0.9em; }
+
+.site_footer { padding-top: 96px; padding-bottom: 56px; color: var(--nc_dim); font-size: 14px; }
+.site_footer .nc_etched { margin-bottom: 24px; }
+.site_footer a { color: var(--nc_soft); border-bottom: 1px solid var(--nc_faint); }
+
+@media (max-width: 640px) {
+  .brand { font-size: 18px; }
+  .site_nav a { padding: 5px 10px; font-size: 14px; white-space: nowrap; }
+  .post_row { grid-template-columns: 1fr; }
+  .post_row time { grid-column: 1; grid-row: auto; }
+}

@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<section class="home">
+  <div class="section_head">
+    <h1 class="nc_title">Write-ups</h1>
+    <p class="nc_subtitle">{{ site.description }}</p>
+  </div>
+  <div class="section_rule"></div>
+  {%- if site.posts.size > 0 %}
+  <ul class="post_list nc_well">
+    {%- for post in site.posts %}
+    <li>
+      <a class="post_row nc_rise" href="{{ post.url | relative_url }}">
+        <span class="nc_name">{{ post.title }}</span>
+        <span class="post_summary">{{ post.description | default: post.excerpt | strip_html | normalize_whitespace | truncate: 150 }}</span>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %b %Y" }}</time>
+      </a>
+    </li>
+    {%- endfor %}
+  </ul>
+  {%- else %}
+  <p class="nc_soft">Nothing here yet.</p>
+  {%- endif %}
+</section>

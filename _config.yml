@@ -1,0 +1,23 @@
+# Site settings. url is the address GitHub gives the site; baseurl is "" for a
+# <username>.github.io repo, or "/<repo name>" for any other repo.
+title: sagemono
+description: Write-ups on PS3 internals, read from the code and the silicon.
+url: https://sagemono.github.io
+baseurl: ""
+github_username: sagemono
+
+# Posts live at /2026/bootldr-updater-dead-code/
+permalink: /:year/:title/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+plugins:
+  - jekyll-feed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor

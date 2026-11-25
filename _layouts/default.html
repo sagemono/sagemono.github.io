@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+<meta name="description" content="{{ page.description | default: site.description | strip_html | normalize_whitespace | truncate: 160 }}">
+<meta name="theme-color" content="#0C0C0E">
+<link rel="preload" href="{{ '/assets/fonts/GilliusADF-Regular.otf' | relative_url }}" as="font" type="font/otf" crossorigin>
+<link rel="stylesheet" href="{{ '/assets/css/night_console.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/blog.css' | relative_url }}">
+{% feed_meta %}
+</head>
+<body class="nc_page">
+
+<header class="site_header">
+  <div class="wrap header_inner">
+    <a class="brand" href="{{ '/' | relative_url }}"><span class="nc_diamond"></span>{{ site.title }}</a>
+    <nav class="site_nav" aria-label="Main">
+      <a class="nc_rise" href="{{ '/' | relative_url }}"{% if page.url == '/' or page.layout == 'post' %} aria-current="page"{% endif %}>Write-ups</a>
+      <a class="nc_rise" href="{{ '/feed.xml' | relative_url }}">RSS</a>
+      <a class="nc_rise" href="https://github.com/{{ site.github_username }}">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+{{ content }}
+</main>
+
+<footer class="site_footer wrap">
+  <div class="nc_etched"></div>
+  <p>Set in Gillius ADF by <a href="https://arkandis.tuxfamily.org/">Arkandis Digital Foundry</a> (GPL 2 or later with font exception, <a href="{{ '/assets/fonts/LICENSE_gillius.txt' | relative_url }}">license</a>) and DejaVu Sans Mono (Bitstream Vera license, <a href="{{ '/assets/fonts/LICENSE_dejavu.txt' | relative_url }}">license</a>).</p>
+</footer>
+</body>
+</html>
